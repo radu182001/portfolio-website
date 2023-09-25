@@ -13,7 +13,12 @@
 <body>
     
     <section class="top" id="Home">
-        <nav>
+        <button aria-expanded="false" class="menu-toggle">
+            <ion-icon class="menu-icon" name="reorder-four-outline"></ion-icon>
+            <ion-icon class="close-icon" name="close-outline"></ion-icon>
+        </button>
+
+        <nav data-visible="false" class="navigation-bar">
             <ul>
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#About-me">About me</a></li>
@@ -30,9 +35,6 @@
         </div>
         <div class="Home-right">
             <img src="./assets/me.jpg" alt="me-photo">
-            <svg>
-                <rect pathLength="100" class="svg-border"></rect>
-            </svg>
         </div>
     </section>
 

@@ -1,3 +1,22 @@
+// Menu toggle
+
+const nav = document.querySelector(".navigation-bar");
+const menu_btn = document.querySelector(".menu-toggle");
+
+menu_btn.addEventListener("click", () => {
+    var visible = nav.getAttribute("data-visible");
+
+    if (visible === "false"){
+        nav.setAttribute("data-visible", "true");
+        menu_btn.setAttribute("aria-expanded", "true");
+    } else {
+        nav.setAttribute("data-visible", "false");
+        menu_btn.setAttribute("aria-expanded", "false");
+    }
+})
+
+// Send email
+
 function refresh() {
     var form = document.getElementsByClassName("input")[0];
 
