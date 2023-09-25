@@ -1,0 +1,374 @@
+:root {
+    --clr-background: #030203;
+    --clr-text: #E8E3ED;
+    --clr-text-secondary: #b3adb8;
+    --clr-primary: #85715E;
+    --clr-secondary: #211B26;
+    --clr-accent: #6C9D84;
+    --clr-primary2: #9e8c7c;
+
+    --margin: 10vw;
+
+    font-family: 'Tektur', cursive;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    background-color: var(--clr-background);
+    color: var(--clr-text);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.full-bleed {
+    box-shadow: 0 0 0 100vmax var(--clr-primary);
+    clip-path: inset(0 -100vmax);
+}
+
+.button {
+    font-family: 'Tektur', cursive;
+    color: var(--clr-text);
+    background-color: var(--clr-accent);
+    border: 0.2em solid #355a47;
+    height: 2em;
+    text-shadow: 1px 1px 4px var(--clr-background);
+    transition: background-color 500ms;
+    font-size: clamp(1rem, 1vw, 1.3rem)
+}
+
+.button:hover,
+.button:focus-visible {
+    cursor: pointer;
+    background-color: #355a47;
+}
+
+.top {
+    display: flex;
+    justify-content: end;
+    padding: 0 2em;
+    padding-bottom: max(10vh, 2em);
+}
+
+.top ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5em;
+}
+
+.top a {
+    text-decoration: none;
+    color: var(--clr-text);
+}
+
+.top a:hover,
+.top a:focus-visible {
+    color: #6C9D84;
+    transition: color 200ms;
+}
+
+.Home {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: clamp(4em, 8vh, 7em);
+}
+
+.Home-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Home-left h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+}
+
+.Home-left span {
+    display: block;
+}
+
+.Home-right {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    isolation: isolate;
+}
+
+.Home-right img {
+    aspect-ratio: 1;
+    max-width: 13rem;
+}
+
+.Home-right svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(-2em, 1.3em) rotate(-8deg);
+    z-index: -1;
+}
+
+.svg-border {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: var(--clr-accent);
+    stroke-width: 1em;
+    stroke-dasharray: 1.7px 1.7px;
+    stroke-dashoffset: 0.2px;
+}
+
+.About-me {
+    background-color: var(--clr-primary);
+    color: var(--clr-background);
+    margin: 10vw var(--margin);
+    padding: clamp(2em, 6vw, 8em);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.About-me h2 {
+    font-size: clamp(1.8rem, 2vw, 2.5rem);
+}
+
+.About-me p {
+    font-weight: 500;
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
+    padding: min(3em, 2vh) 0;
+}
+
+.About-me h3 {
+    font-size: clamp(1.5rem, 1.5vw, 2rem);
+}
+
+.About-me ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: min(10em, 5vw);
+    padding: 0;
+    padding-top: 1em;
+}
+
+.About-me li {
+    background-color: var(--clr-primary2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 100%;
+    border-radius: 0.3em;
+    flex: 1 1 5em;
+    max-width: 5em;
+    min-width: 5em;
+    aspect-ratio: 3/1;
+    font-weight: 700;
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
+}
+
+.Projects {
+    margin: 10vw var(--margin);
+    padding: clamp(1em, 2vw, 3em) clamp(2em, 6vw, 8em);
+}
+
+.Projects h2 {
+    font-size: clamp(1.8rem, 2vw, 2.5rem);
+    margin-bottom: clamp(4rem, 5vw, 8rem);
+}
+
+.Project {
+    background-color: var(--clr-secondary);
+    border-radius: 1.3rem;
+    padding: clamp(2em, 2vw, 6em) clamp(1em, 1.5vw + 1em, 6em) clamp(1em, 1vw, 4em);
+    margin: clamp(1rem, 4vw, 4rem) auto 0;
+}
+
+.project-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.Project img {
+    max-width: max(13rem, 4vw);
+    aspect-ratio: 1/1;
+    /* box-shadow: 4px 4px 8px 2px var(--clr-background); */
+}
+
+.project-container div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.project-container div > * {
+    margin: 0;
+}
+
+.project-container div p {
+    margin-top: 1rem;
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
+}
+
+.project-container h3 {
+    font-size: clamp(1.5rem, 1.5vw, 2rem);
+}
+
+.project-container h5 {
+    font-size: clamp(0.8rem, 1vw, 1rem);
+}
+
+.Project a {
+    margin: 1rem 0 0 0;
+    color: var(--clr-accent);
+    font-size: clamp(0.7rem, 0.9vw, 0.9rem);
+    font-weight: 700;
+    display: flex;
+    justify-content: end;
+}
+
+.Project a:hover, 
+.Project a:focus-visible {
+    cursor: pointer;
+}
+
+.Project a:hover::before {
+    content: '>';
+    margin-right: 1em;
+}
+
+.Contact {
+    margin: 10vw var(--margin);
+    padding: clamp(2em, 6vw, 8em);
+}
+
+.Contact h2 {
+    font-size: clamp(1.8rem, 2vw, 2.5rem);
+}
+
+.input {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.input h5{
+    margin: 0.3rem auto;
+    font-weight: 400;
+    color: var(--clr-text-secondary);
+    font-size: clamp(0.8rem, 1vw, 1.1rem);
+}
+
+.input input {
+    margin: 0 auto 1rem;
+    width: 100%;
+    height: 1.8rem;
+    padding: 0 0.7em;
+    font-weight: 700;
+    font-size: clamp(0.75rem, 0.95vw, 1rem);
+    background-color: var(--clr-text);
+}
+
+.input input::placeholder {
+    opacity: 0.6;
+}
+
+.input span {
+    color: var(--clr-accent);
+}
+
+.Contact button {
+    margin: 1rem auto 0;
+}
+
+.error {
+    margin: -0.5rem auto 1rem;
+    color:rgb(219, 5, 5);
+    opacity: 0.6;
+    font-size: clamp(0.6rem, 0.7vw, 0.8rem);
+}
+
+.SMlinks ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SMlinks ion-icon {
+    padding: 0 1rem 1rem;
+    scale: 1.5;
+}
+
+.SMlinks ion-icon:hover {
+    cursor: pointer;
+    color: var(--clr-accent);
+    transition: color 500ms;
+}
+
+.SMlinks a {
+    text-decoration: none;
+    color: var(--clr-text);
+}
+
+@media only screen and (min-width: 700px) {
+    .Home {
+        flex-direction: row;
+        gap: clamp(5em, 8vw, 15em);
+    }
+
+    .Home-left {
+        align-items: start;
+    }
+
+    .Home-right {
+        margin: 0;
+    }
+
+    .About-me {
+        align-items: start;
+    }
+
+    .project-container {
+        flex-direction: row;
+    }
+
+    .project-container div {
+        align-items: start;
+    }
+
+    .input {
+        width: fit-content;
+        margin: 0;
+    }
+
+    .input input {
+        width: min(50vw, 30rem);
+    }
+}

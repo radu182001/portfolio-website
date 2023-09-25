@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <section class="top" id="Home">
+        <nav>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About-me">About me</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section class="Home">
+        <div class="Home-left">
+            <h1>Hi, my name is<span>Radu Popescu</span></h1>
+            <button class="button">Download resume</button>
+        </div>
+        <div class="Home-right">
+            <img src="./assets/me.jpg" alt="me-photo">
+            <svg>
+                <rect pathLength="100" class="svg-border"></rect>
+            </svg>
+        </div>
+    </section>
+
+    <section class="About-me full-bleed" id="About-me">
+        <h2>About me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+        <h3>Skills</h3>
+        <ul>
+            <li>C</li>
+            <li>C++</li>
+            <li>Java</li>
+            <li>React</li>
+            <li>Unity</li>
+        </ul>
+    </section>
+
+    <section class="Projects" id="Projects">
+        <h2>Projects</h2>
+        <div class="Project">
+            <div class="project-container">
+                <div>
+                    <h3>SMIG</h3>
+                    <h5>2017</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <img src="./assets/SMIG.png" alt="smig-photo">
+            </div>
+            <a>Learn more</a>
+        </div>
+
+        <div class="Project">
+            <div class="project-container">
+                <div>
+                    <h3>Rail Crossroad</h3>
+                    <h5>2018</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <img src="./assets/RC.png" alt="rc-photo">
+            </div>
+            <a>Learn more</a>
+        </div>
+    </section>
+
+    <section class="Contact" id="Contact">
+        <h2>Contact</h2>
+        <form class="input">
+            <h5>Name<span>*</span></h5>
+            <input type="text" class="name-input" placeholder="Name">
+            <h6 class="error name" style="display: none;">* this field is required</h6>
+
+            <h5>Company name<span>*</span></h5>
+            <input type="text" class="company-name-input" placeholder="Company name">
+            <h6 class="error comp" style="display: none;">* this field is required</h6>
+
+            <h5>Email<span>*</span></h5>
+            <input type="email" class="email-input" placeholder="Email">
+            <h6 class="error email" style="display: none;">* this field is required</h6>
+            <h6 class="error valid" style="display: none;">please enter a valid email</h6>
+
+            <h5>Message<span>*</span></h5>
+            <input type="text" class="message-input" placeholder="Message">
+            <h6 class="error msg" style="display: none;">* this field is required</h6>
+        </form>
+        <button onclick="sendEmail()" class="button">Send</button>
+    </section>
+
+    <section class="SMlinks">
+        <ul>
+            <li><a href="https://www.linkedin.com/in/radu-popescu-35a45b156/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li><a href="https://www.instagram.com/radupopesq/"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="https://www.youtube.com/channel/UCvU3OcI3KXxtoZMnRUKkkNA"><ion-icon name="logo-youtube"></ion-icon></a></li>
+            <li><a href="https://www.facebook.com/popescu.raduandrei/"><ion-icon name="logo-facebook"></ion-icon></a></li>
+        </ul>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="script.js"></script>
+
+</html>
