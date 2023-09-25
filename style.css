@@ -72,6 +72,7 @@ img {
 .top a {
     text-decoration: none;
     color: var(--clr-text);
+    font-size: clamp(1rem, 1vw, 1.1rem);
 }
 
 .top a:hover,
@@ -314,7 +315,14 @@ img {
     font-size: clamp(0.6rem, 0.7vw, 0.8rem);
 }
 
+.SMlinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .SMlinks ul {
+    padding: 0;
     list-style: none;
     display: flex;
     align-items: center;
