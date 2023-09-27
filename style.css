@@ -9,9 +9,9 @@
 
     --margin: 10vw;
 
-    font-family: 'Tektur', cursive;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
 
     background-color: var(--clr-background);
     color: var(--clr-text);
@@ -37,7 +37,7 @@ img {
 }
 
 .button {
-    font-family: 'Tektur', cursive;
+    font-family: inherit;
     color: var(--clr-text);
     background-color: var(--clr-accent);
     border: 0.2em solid #355a47;
@@ -164,7 +164,7 @@ img {
 }
 
 .About-me p {
-    font-weight: 500;
+    font-weight: 700;
     font-size: clamp(1rem, 1.3vw, 1.5rem);
     padding: min(3em, 2vh) 0;
 }
