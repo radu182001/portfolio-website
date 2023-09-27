@@ -256,6 +256,7 @@ img {
 
 .Project a {
     margin: 1rem 0 0 0;
+    text-decoration: none;
     color: var(--clr-accent);
     font-size: clamp(0.7rem, 0.9vw, 0.9rem);
     font-weight: 700;
@@ -268,7 +269,8 @@ img {
     cursor: pointer;
 }
 
-.Project a:hover::before {
+.Project a:hover::before,
+.Project a:focus-visible::before {
     content: '>';
     margin-right: 1em;
 }
@@ -342,10 +344,11 @@ img {
     scale: 1.5;
 }
 
-.SMlinks ion-icon:hover {
+.SMlinks ion-icon:hover,
+.SMlinks ion-icon:focus-visible {
     cursor: pointer;
     color: var(--clr-accent);
-    transition: color 500ms;
+    transition: color 350ms;
 }
 
 .SMlinks a {

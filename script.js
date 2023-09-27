@@ -15,6 +15,29 @@ menu_btn.addEventListener("click", () => {
     }
 })
 
+// Projects display style
+
+function alternateStyle(x) {
+    const projects = document.getElementsByClassName("project-container");
+    if (x.matches) {
+        for (var i = 0; i < projects.length; i++){
+            if (i % 2 != 0)
+                projects[i].style.flexDirection = "row-reverse";
+            else projects[i].style.flexDirection = "row";
+        }
+    } else {
+        for (var i = 0; i < projects.length; i++){
+            projects[i].style.flexDirection = "column";
+        }
+    }
+}
+
+var x = window.matchMedia("(min-width: 700px)")
+alternateStyle(x);
+x.addEventListener("change", () => {
+    alternateStyle(x);
+});
+
 // Send email
 
 function refresh() {
