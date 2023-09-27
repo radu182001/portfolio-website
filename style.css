@@ -164,7 +164,7 @@ img {
 }
 
 .About-me p {
-    font-weight: 700;
+    font-weight: 600;
     font-size: clamp(1rem, 1.3vw, 1.5rem);
     padding: min(3em, 2vh) 0;
 }
