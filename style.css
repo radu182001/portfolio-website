@@ -11,7 +11,7 @@
 
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    letter-spacing: 0.8px;
+    letter-spacing: 1px;
 
     background-color: var(--clr-background);
     color: var(--clr-text);
@@ -164,7 +164,7 @@ img {
 }
 
 .About-me p {
-    font-weight: 600;
+    font-weight: 500;
     font-size: clamp(1rem, 1.3vw, 1.5rem);
     padding: min(3em, 2vh) 0;
 }
