@@ -96,6 +96,39 @@ img {
     transition: color 200ms;
 }
 
+.alertContainer {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.5rem;
+    z-index: 9999;
+}
+
+.alertOk {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(59, 199, 24);
+    color: var(--clr-background);
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    width: 15rem;
+}
+
+.alertIcon {
+    scale: 1.8;
+    margin-right: 1rem;
+}
+
+.closeIcon {
+    position: absolute;
+    top: 0.2rem;
+    right: 0.2rem;
+}
+
 .Home {
     display: flex;
     flex-direction: column-reverse;
