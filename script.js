@@ -15,6 +15,25 @@ menu_btn.addEventListener("click", () => {
   }
 });
 
+// Alert
+const closeAlert = document.querySelector(".closeIcon");
+const alertContainer = document.querySelector(".alertContainer");
+const alert = document.querySelector(".alert");
+
+closeAlert.addEventListener("click", () => {
+  alertContainer.style.display = "none";
+});
+
+function showAlertOk() {
+  alert.setAttribute("ok", "true");
+  alertContainer.style.display = "flex";
+}
+
+function showAlertErr() {
+  alert.setAttribute("ok", "false");
+  alertContainer.style.display = "flex";
+}
+
 // Projects display style
 
 function alternateStyle(x) {
@@ -61,7 +80,7 @@ function sendEmail() {
   var name = document.getElementsByClassName("name-input")[0].value;
   var company = document.getElementsByClassName("company-name-input")[0].value;
   var email = document.getElementsByClassName("email-input")[0].value;
-  var message = document.getElementsByClassName("message-input")[0].value;
+  var msg = document.getElementsByClassName("message-input")[0].value;
 
   if (!name) {
     document.getElementsByClassName("error name")[0].style.display = "";
@@ -75,11 +94,11 @@ function sendEmail() {
   if (!verifyEmail(email) && email) {
     document.getElementsByClassName("error valid")[0].style.display = "";
   }
-  if (!message) {
+  if (!msg) {
     document.getElementsByClassName("error msg")[0].style.display = "";
   }
 
-  if (!name || !email || !company || !message || !verifyEmail(email)) return;
+  if (!name || !email || !company || !msg || !verifyEmail(email)) return;
 
   var finalMessage =
     "Company: " +
@@ -87,7 +106,7 @@ function sendEmail() {
     "<br>Email: " +
     email +
     "<br><br>" +
-    message +
+    msg +
     "<br><br>" +
     name;
 
@@ -97,7 +116,11 @@ function sendEmail() {
     From: "kronic182001@gmail.com",
     Subject: "Mail from website!",
     Body: finalMessage,
-  }).then((message) => alert(message));
+  }).then((message) => {
+    //alert(message);
+    if (message === "OK") showAlertOk();
+    else showAlertErr();
+  });
 
   refresh();
   noError();
