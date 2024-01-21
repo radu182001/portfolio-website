@@ -1,5 +1,6 @@
 :root {
     --clr-background: #030203;
+    --clr-background2: #050a08;
     --clr-text: #E8E3ED;
     --clr-text-secondary: #b3adb8;
     --clr-primary: #85715E;
@@ -13,7 +14,7 @@
     font-weight: 400;
     letter-spacing: 1px;
 
-    background-color: var(--clr-background);
+    background: linear-gradient(225deg, var(--clr-background) 0%, var(--clr-background2) 65%, var(--clr-background) 80%);;
     color: var(--clr-text);
 }
 
@@ -69,7 +70,7 @@ img {
     align-items: center;
     justify-content: end;
     z-index: 1000;
-    background: rgba(3, 2, 3, 0.85);
+    background: rgba(3, 2, 3, 0.70);
     backdrop-filter: blur(0.3rem);
 }
 
@@ -459,7 +460,7 @@ img {
         height: fit-content;
         z-index: 1000;
 
-        background: rgba(3, 2, 3, 0.85);
+        /* background: rgba(3, 2, 3, 0.85); */
         backdrop-filter: blur(0.3rem);
 
         transform: translateY(0);
